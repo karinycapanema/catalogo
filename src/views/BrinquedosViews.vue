@@ -2,15 +2,16 @@
 import { listaProdutos } from '@/data/produtos';
 import { ref } from 'vue'
 import { formatarPreco } from '@/utils/produtoUtils';
+
 const produtos = ref(listaProdutos);
-produtos.value = produtos.value.filter(p => p.categoria === 'Alimentos' );
+produtos.value = produtos.value.filter(p => p.categoria === 'Brinquedos' ); 
 
 </script>
 
 <template>
 
     <div class="container">
-        <h1>Alimentos</h1>
+        <h1>Brinquedos</h1>
         <div class="produtos">
             <div v-for="produto in produtos" key="produto.id" class="produto-card">
                 <div>
@@ -23,10 +24,10 @@ produtos.value = produtos.value.filter(p => p.categoria === 'Alimentos' );
             </div>
         </div>
     </div>
+
 </template>
 
-<style scoped> 
-
+<style scoped>
 .produto-card {
     display: flex;
     justify-content: space-between;
