@@ -1,10 +1,17 @@
 <script setup>
+import AppHeader from './components/icons/AppHeader.vue';
+import { RouterView } from 'vue-router';
 
 </script>
 
 <template>
-  <router-view />
-  
+ 
+ <AppHeader>
+  <main>
+     <router-view />
+  </main>
+ </AppHeader>
+ 
 </template>
 
 <style scoped>
